@@ -1,0 +1,47 @@
+﻿<Window x:Class="WpfICacleivas.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfICacleivas"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" SharedSizeGroup="Label"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="NpedidoLabel" Grid.Row="0" Grid.Column="0" Content="Pedido"></Label>
+        <TextBox x:Name="NpedidoTextBox" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding pedido}"></TextBox>
+        <Label x:Name="NclienteLabel" Grid.Row="1" Grid.Column="0" Content="Cliente"></Label>
+        <TextBox x:Name="NclienteTextBox" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding Ncliente}"></TextBox>
+        <Label x:Name="ProductoLabel" Grid.Row="2" Grid.Column="0" Content="Productos"></Label>
+        <ComboBox x:Name="ProductoComboBox" Grid.Row="2" Grid.Column="1"></ComboBox>
+     
+        <Button x:Name="AgregarButton" Grid.Row="2" Grid.Column="2" Height="20" Width="20" Margin="4">+</Button>
+
+        <ListBox x:Name="listN" Height="auto" Grid.Row="3" Grid.Column="1"></ListBox>
+
+        <Grid Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Button x:Name="SaveButton" Grid.Row="0" Grid.Column="0" Height="32" Margin="10">Guardar</Button>
+            <Button x:Name="SelectButton" Grid.Row="0" Grid.Column="1" Height="32" Margin="10">Seleccionar</Button>
+            <Button x:Name="ClearButton" Grid.Row="0" Grid.Column="2" Height="32" Margin="10">Limpiar</Button>
+        </Grid>
+    </Grid>
+</Window>
